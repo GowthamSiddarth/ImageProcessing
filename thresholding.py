@@ -13,7 +13,7 @@ show_image('img2gray', img2gray)
 threshold_with_grayscale = cv2.threshold(img2gray, 10, 255, cv2.THRESH_BINARY)[1]
 show_image('threshold_with_grayscale', threshold_with_grayscale)
 
-adaptive_threshold = cv2.adaptiveThreshold(img2gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 115, 1)
+adaptive_threshold = cv2.adaptiveThreshold(img2gray, 255, cv2.ADAPTIVE_THRESH_GAUSSIAN_C, cv2.THRESH_BINARY, 35, 1)
 show_image('adaptive_threshold', adaptive_threshold)
 
 otsu_threshold = cv2.threshold(img2gray, 125, 255, cv2.THRESH_BINARY + cv2.THRESH_OTSU)[1]
