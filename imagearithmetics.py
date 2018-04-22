@@ -27,7 +27,7 @@ show_image('roi', roi)
 img3togray = cv2.cvtColor(img3, cv2.COLOR_BGR2GRAY)
 show_image('img3togray', img3togray)
 
-mask = cv2.threshold(img3togray, 220, 225, cv2.THRESH_BINARY_INV)[1]
+mask = cv2.threshold(img3togray, 220, 255, cv2.THRESH_BINARY_INV)[1]
 show_image('mask', mask)
 
 mask_inv = cv2.bitwise_not(mask)
