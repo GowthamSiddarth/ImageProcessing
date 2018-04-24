@@ -3,7 +3,7 @@ import cv2
 eye_cascade = cv2.CascadeClassifier('classifiers/haarcascade_eye.xml')
 face_cascade = cv2.CascadeClassifier('classifiers/haarcascade_frontalface_default.xml')
 
-img = cv2.imread('img/obama.jpg')
+img = cv2.imread('img/actors.jpg')
 gray = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)
 
 faces = face_cascade.detectMultiScale(image=gray, scaleFactor=1.3, minNeighbors=5)
