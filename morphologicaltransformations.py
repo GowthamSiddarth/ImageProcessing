@@ -15,12 +15,17 @@ kernel = np.ones((5, 5), dtype=np.uint8)
 erosion = cv2.erode(mask, kernel, iterations=1)
 dilation = cv2.dilate(mask, kernel, iterations=1)
 
+opening = cv2.morphologyEx(mask, cv2.MORPH_OPEN, kernel)
+closing = cv2.morphologyEx(mask, cv2.MORPH_CLOSE, kernel)
+
 cv2.imshow('img', img)
 cv2.imshow('hsv', hsv_img)
 cv2.imshow('mask', mask)
 cv2.imshow('res', res)
 cv2.imshow('erosion', erosion)
 cv2.imshow('dilation', dilation)
+cv2.imshow('opening', opening)
+cv2.imshow('closing', closing)
 
 cv2.waitKey(0)
 cv2.destroyAllWindows()
