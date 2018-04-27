@@ -20,8 +20,6 @@ print("[INFO] computing object detections")
 net.setInput(blob)
 detections = net.forward()
 
-print("detections.shape = " + detections.shape)
-
 for i in range(0, detections.shape[2]):
     confidence = detections[0, 0, i, 2]
 

@@ -103,5 +103,5 @@ ENV/
 # IDEA
 .idea/
 
-# caffemodel files
-.caffemodel
+# caffemodel
+*.caffemodel
