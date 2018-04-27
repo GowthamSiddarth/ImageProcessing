@@ -35,3 +35,5 @@ for i in range(0, detections.shape[2]):
 cv2.imshow("Output", image)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+
+#python detectfaces.py -i img/actors.jpg -p resources/deploy.prototxt.txt -m resources/res10_300x300_ssd_iter_140000.caffemodel
